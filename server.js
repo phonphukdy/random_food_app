@@ -11,7 +11,4 @@ app.use(bodypaser.json({limit:"10mb"}))
 
 readdirSync('./Routes').map((r)=>app.use('/api', require(`./Routes/${r}`)))
 
-
-// app.get('/', (req, res) => res.send("Server is running"))
-
 app.listen(5000, ()=>console.log("Server runing on port 5000"))
